@@ -7,4 +7,12 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+<!--    Themes that we are using  -->
+    <color name="DarkBlue">#1E3A8A</color>
+    <color name="LightBlue">#0284C7</color>
+    <color name="StrongOrange">#F97316</color>
+    <color name="JustYellow">#FACC15</color>
+    <color name="White">#F5F5F5</color>
+    <color name="BrightDark">#0F182A</color>
 </resources>
