@@ -16,8 +16,11 @@
         <entry key="..\:/ProyekProgram/Limify01/app/src/main/res/layout/fragment_second.xml" value="0.3020833333333333" />
         <entry key="..\:/ProyekProgram/Limify01/app/src/main/res/menu/menu_main.xml" value="0.1" />
         <entry key="..\:/ProyekProgram/Limify01/app/src/main/res/menu/navbar_menu.xml" value="0.33" />
-        <entry key="..\:/Users/mjwir/AndroidStudioProjects/ForGitHub/LiMify/app/src/main/res/layout/activity_login.xml" value="0.25" />
+        <entry key="..\:/Users/mjwir/AndroidStudioProjects/ForGitHub/LiMify/app/src/main/res/drawable/ic_splash_screen.xml" value="0.1" />
+        <entry key="..\:/Users/mjwir/AndroidStudioProjects/ForGitHub/LiMify/app/src/main/res/layout/activity_li_mi_fy_splash_screen.xml" value="0.25" />
+        <entry key="..\:/Users/mjwir/AndroidStudioProjects/ForGitHub/LiMify/app/src/main/res/layout/activity_login.xml" value="0.152" />
         <entry key="..\:/Users/mjwir/AndroidStudioProjects/ForGitHub/LiMify/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/mjwir/AndroidStudioProjects/ForGitHub/LiMify/app/src/main/res/layout/activity_splash_screen.xml" value="0.1" />
         <entry key="..\:/Users/mjwir/AndroidStudioProjects/ForGitHub/LiMify/app/src/main/res/layout/fragment_account.xml" value="0.25" />
       </map>
     </option>
