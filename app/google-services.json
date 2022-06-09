@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "813170430210",
+    "project_id": "limify",
+    "storage_bucket": "limify.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:813170430210:android:1caae91179932775c9721b",
+        "android_client_info": {
+          "package_name": "com.example.limify01"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "813170430210-vagtdf2j1of4tekn194bd75agd09jr7b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBwBwmcJQKnTY8_xs4JbPZEK3ky4-pSCKg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "813170430210-vagtdf2j1of4tekn194bd75agd09jr7b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
