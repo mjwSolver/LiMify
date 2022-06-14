@@ -16,12 +16,11 @@ class activity_login : AppCompatActivity() {
         bind = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(bind.root)
 
-        val userId= intent.getStringExtra( "user_id")
+        val userId = intent.getStringExtra( "user_id")
         val passId = intent.getStringExtra( "pass_id")
 
         bind.usernameTextView.text = "User ID :: $userId"
         bind.passwordTextView.text = "Password ID :: $passId"
-
 
         bind.logoutButton.setOnClickListener {
             // Logout from app.

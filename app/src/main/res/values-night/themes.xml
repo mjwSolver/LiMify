@@ -1,14 +1,23 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Theme.Limify01" parent="Theme.MaterialComponents.DayNight.NoActionBar">
-        <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_200</item>
-        <item name="colorPrimaryVariant">@color/purple_700</item>
-        <item name="colorOnPrimary">@color/black</item>
-        <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/teal_200</item>
-        <item name="colorSecondaryVariant">@color/teal_200</item>
-        <item name="colorOnSecondary">@color/black</item>
+        <!-- Primary Default brand color. -->
+<!--        <item name="colorPrimary">@color/purple_200</item>-->
+<!--        <item name="colorPrimaryVariant">@color/purple_700</item>-->
+<!--        <item name="colorOnPrimary">@color/black</item>-->
+        <!-- Primary LiMify brand color. -->
+        <item name="colorPrimary">@color/LightBlue</item>
+        <item name="colorPrimaryVariant">@color/DarkBlue</item>
+        <item name="colorOnPrimary">@color/KindaWhite</item>
+
+        <!-- Secondary Default brand color. -->
+<!--        <item name="colorSecondary">@color/teal_200</item>-->
+<!--        <item name="colorSecondaryVariant">@color/teal_700</item>-->
+<!--        <item name="colorOnSecondary">@color/black</item>-->
+        <!-- Secondary LiMify brand color. -->
+        <item name="colorSecondary">@color/JustYellow</item>
+        <item name="colorSecondaryVariant">@color/StrongOrange</item>
+        <item name="colorOnSecondary">@color/BrightBlack</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
