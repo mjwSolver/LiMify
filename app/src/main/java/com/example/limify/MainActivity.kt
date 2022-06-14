@@ -1,12 +1,13 @@
-package com.example.limify01
+package com.example.limify
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
-import com.example.limify01.fragments.AccountFragment
-import com.example.limify01.fragments.CalendarFragment
-import com.example.limify01.fragments.HomeFragment
-import com.example.limify01.fragments.InputFragment
+import com.example.limify.fragments.AccountFragment
+import com.example.limify.fragments.CalendarFragment
+import com.example.limify.fragments.HomeFragment
+import com.example.limify.fragments.InputFragment
+import com.example.limify01.R
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {

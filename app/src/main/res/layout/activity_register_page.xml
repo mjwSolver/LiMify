@@ -4,10 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginPage"
+    tools:context=".RegisterPage"
     android:background="@color/LightBlue">
 
     <ScrollView
+        android:id="@+id/scrollView2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:layout_editor_absoluteX="-70dp"
@@ -29,11 +30,11 @@
 
             <TextView
                 android:id="@+id/LetsTextView"
-                android:layout_width="272dp"
-                android:layout_height="36dp"
+                android:layout_width="336dp"
+                android:layout_height="34dp"
                 android:layout_marginTop="24dp"
                 android:fontFamily="@font/lemonregular"
-                android:text="Lets Sign-up first!"
+                android:text="Registering a New Member"
                 android:textAlignment="center"
                 android:textColor="#FFFFFF"
                 android:textSize="24sp"
@@ -95,24 +96,43 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <Button
-                android:id="@+id/signUpButton"
+                android:id="@+id/backButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="32dp"
-                android:layout_marginEnd="68dp"
-                android:text="Sign Up!"
-                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="48dp"
+                android:layout_marginTop="28dp"
+                android:text="Back"
+                app:layout_constraintStart_toStartOf="@+id/passwordTextInputLayout"
                 app:layout_constraintTop_toBottomOf="@+id/passwordTextInputLayout" />
 
             <Button
                 android:id="@+id/RegisterButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="68dp"
-                android:layout_marginTop="32dp"
+                android:layout_marginTop="28dp"
+                android:layout_marginEnd="60dp"
                 android:text="Register"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/passwordTextInputLayout" />
+
+            <TextView
+                android:id="@+id/passwordTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="48dp"
+                android:layout_marginTop="8dp"
+                android:text="passout"
+                app:layout_constraintStart_toStartOf="@+id/usernameTextView"
+                app:layout_constraintTop_toBottomOf="@+id/usernameTextView" />
+
+            <TextView
+                android:id="@+id/usernameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="userin"
+                app:layout_constraintStart_toStartOf="@+id/RegisterButton"
+                app:layout_constraintTop_toBottomOf="@+id/RegisterButton" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

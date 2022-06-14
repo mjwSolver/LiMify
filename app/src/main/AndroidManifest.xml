@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.limify01">
+    package="com.example.limify">
 
     <application
         android:allowBackup="true"
@@ -14,7 +14,7 @@
         android:theme="@style/Theme.Limify01"
         tools:targetApi="31">
         <activity
-            android:name=".LoginPage"
+            android:name="com.example.limify.LoginPage"
             android:exported="false" />
 <!--            android:exported="true" >-->
 <!--            <intent-filter>-->
@@ -23,7 +23,7 @@
 <!--            </intent-filter>-->
 <!--        </activity>-->
         <activity
-            android:name=".SplashScreen"
+            android:name="com.example.limify.SplashScreen"
             android:exported="true">
 <!--            android:exported="false"/>-->
             <intent-filter>
@@ -33,13 +33,14 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activity_login"
+            android:name="com.example.limify.RegisterPage"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name="com.example.limify.MainActivity"
             android:exported="true"
             android:label="@string/app_name"
-            android:theme="@style/Theme.Limify01.NoActionBar" />
+             />
+<!--        android:theme="@style/Theme.Limify01.NoActionBar"-->
     </application>
 
 </manifest>

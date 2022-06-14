@@ -1,4 +1,4 @@
-package com.example.limify01
+package com.example.limify
 
 import org.junit.Test
 

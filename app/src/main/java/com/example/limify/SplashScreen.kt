@@ -1,4 +1,4 @@
-package com.example.limify01
+package com.example.limify
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
