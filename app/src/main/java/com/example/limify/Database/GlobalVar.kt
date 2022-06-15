@@ -7,10 +7,16 @@ import com.example.limify01.model.User
 
 class GlobalVar {
     companion object{
-        var uid=null
+        var uid = ""
         val STORAGE_PERMISSION_CODE: Int = 100
         val listDataUser = ArrayList<User>()
-        val listDataPengelauran = ArrayList<Pengeluaran>()
+        val listDataPengeluaran = ArrayList<Pengeluaran>()
         val listDataPemasukkann = ArrayList<Pemasukkan>()
+
+
+        //
+        var dataUser = ArrayList<String>()
+
+
     }
 }

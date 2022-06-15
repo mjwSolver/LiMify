@@ -5,6 +5,8 @@ import android.content.Intent
 import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.PopupMenu
+import androidx.appcompat.app.AlertDialog
 import com.example.limify.databinding.ActivityRandomRedirectBinding
 import com.google.firebase.auth.FirebaseAuth
 
@@ -18,6 +20,19 @@ class randomRedirect : AppCompatActivity() {
         bind = ActivityRandomRedirectBinding.inflate(layoutInflater)
         setContentView(bind.root)
 
+
+//        var dialer = AlertDialog.Builder(this)
+//        val rencanapop = bind.inflate(R.layout.popupinitialsetting, null)
+
+
+
+        sharedpref()
+        listeners()
+
+    }
+
+
+    fun sharedpref() {
         pref = getSharedPreferences("shared", Context.MODE_PRIVATE)
 
         val name = pref.getString("username", "")
@@ -25,6 +40,9 @@ class randomRedirect : AppCompatActivity() {
         val pass = pref.getString("password", "")
         bind.passwordTextView.setText(pass)
 
+    }
+
+    fun listeners() {
         bind.redirectButton.setOnClickListener{
             startActivity(Intent(this, MainActivity::class.java))
             finish()
@@ -43,12 +61,8 @@ class randomRedirect : AppCompatActivity() {
         }
 
 
-
-
-
-
-
     }
+
 
 
 }
