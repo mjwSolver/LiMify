@@ -1,17 +1,22 @@
 package Database
 
-import Model.HistoryRecycle
-import Model.Keuangan
+import com.example.limify01.model.Pemasukkan
+import com.example.limify01.model.Pengeluaran
 import com.example.limify01.model.User
 
 
 class GlobalVar {
     companion object{
-        var uid=null
+        var uid = ""
         val STORAGE_PERMISSION_CODE: Int = 100
         val listDataUser = ArrayList<User>()
-        var seelist = false
-        val listDataKeuangan = ArrayList<Keuangan>()
-        val listHistoryRecycle = ArrayList<HistoryRecycle>()
+        val listDataPengeluaran = ArrayList<Pengeluaran>()
+        val listDataPemasukkann = ArrayList<Pemasukkan>()
+
+
+        //
+        var dataUser = ArrayList<String>()
+
+
     }
 }

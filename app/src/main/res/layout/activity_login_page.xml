@@ -43,9 +43,10 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/LiMifyTitleImageView" />
 
+<!--                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"-->
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/usernameTextInputLayout"
-                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                style="@style/overrideOverlay"
                 android:layout_width="0dp"
                 android:layout_height="55dp"
                 android:layout_marginStart="24dp"
@@ -58,21 +59,29 @@
                 app:boxStrokeWidth="0dp"
                 app:boxStrokeWidthFocused="0dp"
                 app:endIconMode="clear_text"
+                app:endIconTint="@color/DarkBlue"
+                app:hintTextColor="@color/DarkBlue"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/LetsTextView"
-                app:startIconDrawable="@drawable/ic_baseline_person_24">
+                app:startIconDrawable="@drawable/ic_baseline_person_24"
+                app:startIconTint="@color/DarkBlue">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Email" />
+                    android:backgroundTint="@color/KindaWhite"
+                    android:hint="Email"
+                    android:textColor="@color/DarkBlue"
+                    android:textColorHint="@color/StrongOrange"
+                    android:textColorLink="@color/StrongOrange" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
+<!--                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"-->
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/passwordTextInputLayout"
-                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                style="@style/overrideOverlay"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
@@ -85,44 +94,54 @@
                 app:boxStrokeWidth="0dp"
                 app:boxStrokeWidthFocused="0dp"
                 app:endIconMode="password_toggle"
+                app:endIconTint="@color/DarkBlue"
+                app:hintTextColor="@color/DarkBlue"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/usernameTextInputLayout"
-                app:startIconDrawable="@drawable/ic_baseline_lock_24">
+                app:startIconDrawable="@drawable/ic_baseline_lock_24"
+                app:startIconTint="@color/DarkBlue">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Password" />
+                    android:backgroundTint="@color/KindaWhite"
+                    android:hint="Password"
+                    android:inputType="textPassword"
+                    android:textColor="@color/DarkBlue"
+                    android:textColorHint="@color/DarkBlue"
+                    android:textColorLink="@color/DarkBlue" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <Button
                 android:id="@+id/signInButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="16dp"
                 android:layout_marginEnd="68dp"
                 android:text="Sign In"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/rememberMeRadioButton" />
+                app:layout_constraintTop_toBottomOf="@+id/rememberMeCheckBox" />
 
             <Button
                 android:id="@+id/RegisterButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="68dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="16dp"
                 android:text="Register"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/rememberMeRadioButton" />
+                app:layout_constraintTop_toBottomOf="@+id/rememberMeCheckBox" />
 
-            <RadioButton
-                android:id="@+id/rememberMeRadioButton"
+            <CheckBox
+                android:id="@+id/rememberMeCheckBox"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="24dp"
+                android:buttonTint="@color/KindaWhite"
                 android:text="Remember Me"
+                android:textColor="@color/KindaWhite"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/passwordTextInputLayout" />
 

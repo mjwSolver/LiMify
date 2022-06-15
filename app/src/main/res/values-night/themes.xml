@@ -6,8 +6,8 @@
 <!--        <item name="colorPrimaryVariant">@color/purple_700</item>-->
 <!--        <item name="colorOnPrimary">@color/black</item>-->
         <!-- Primary LiMify brand color. -->
-        <item name="colorPrimary">@color/LightBlue</item>
-        <item name="colorPrimaryVariant">@color/LightBlue</item>
+        <item name="colorPrimary">@color/DarkBlue</item>
+        <item name="colorPrimaryVariant">@color/DarkBlue</item>
         <item name="colorOnPrimary">@color/KindaWhite</item>
 <!--        <item name="android:background">@color/DarkBlue</item>-->
 
