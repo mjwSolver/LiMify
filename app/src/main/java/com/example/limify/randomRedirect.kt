@@ -6,6 +6,7 @@ import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.limify.databinding.ActivityRandomRedirectBinding
+import com.google.firebase.auth.FirebaseAuth
 
 class randomRedirect : AppCompatActivity() {
 
@@ -35,6 +36,7 @@ class randomRedirect : AppCompatActivity() {
             shareEditor.clear()
             shareEditor.apply()
 
+            FirebaseAuth.getInstance().signOut()
             startActivity(Intent(this, LoginPage::class.java))
             finish()
 

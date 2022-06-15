@@ -37,14 +37,15 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/Nama_TextInputLayout"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_width="384dp"
+                android:layout_height="63dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
                 app:errorEnabled="true"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/textView"
-                app:layout_constraintTop_toBottomOf="@+id/textView">
+                app:layout_constraintTop_toBottomOf="@+id/textView"
+                app:startIconDrawable="@drawable/ic_baseline_person_24">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
@@ -55,13 +56,14 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/Alamat_TextInputLayout"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:layout_width="383dp"
+                android:layout_height="58dp"
+                android:layout_marginTop="24dp"
                 app:errorEnabled="true"
                 app:layout_constraintEnd_toEndOf="@+id/Nama_TextInputLayout"
                 app:layout_constraintStart_toStartOf="@+id/Nama_TextInputLayout"
-                app:layout_constraintTop_toBottomOf="@+id/Nama_TextInputLayout">
+                app:layout_constraintTop_toBottomOf="@+id/Nama_TextInputLayout"
+                app:startIconDrawable="@drawable/ic_baseline_house_24">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
@@ -72,13 +74,14 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/Telepon_TextInputLayout"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:layout_width="384dp"
+                android:layout_height="61dp"
+                android:layout_marginTop="24dp"
                 app:errorEnabled="true"
                 app:layout_constraintEnd_toEndOf="@+id/Alamat_TextInputLayout"
                 app:layout_constraintStart_toStartOf="@+id/Alamat_TextInputLayout"
-                app:layout_constraintTop_toBottomOf="@+id/Alamat_TextInputLayout">
+                app:layout_constraintTop_toBottomOf="@+id/Alamat_TextInputLayout"
+                app:startIconDrawable="@drawable/ic_baseline_local_phone_24">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
@@ -90,13 +93,14 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/Email_TextInputLayout"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:layout_width="390dp"
+                android:layout_height="62dp"
+                android:layout_marginTop="24dp"
                 app:errorEnabled="true"
                 app:layout_constraintEnd_toEndOf="@+id/Telepon_TextInputLayout"
                 app:layout_constraintStart_toStartOf="@+id/Telepon_TextInputLayout"
-                app:layout_constraintTop_toBottomOf="@+id/Telepon_TextInputLayout">
+                app:layout_constraintTop_toBottomOf="@+id/Telepon_TextInputLayout"
+                app:startIconDrawable="@drawable/ic_baseline_email_24">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
@@ -108,16 +112,17 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/Password_TextInputLayout"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:layout_width="394dp"
+                android:layout_height="61dp"
+                android:layout_marginTop="24dp"
                 app:counterEnabled="true"
                 app:counterMaxLength="16"
                 app:errorEnabled="true"
                 app:layout_constraintEnd_toEndOf="@+id/Email_TextInputLayout"
                 app:layout_constraintStart_toStartOf="@+id/Email_TextInputLayout"
                 app:layout_constraintTop_toBottomOf="@+id/Email_TextInputLayout"
-                app:passwordToggleEnabled="true">
+                app:passwordToggleEnabled="true"
+                app:startIconDrawable="@drawable/ic_baseline_lock_24">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
@@ -131,10 +136,11 @@
                 android:id="@+id/Display_Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="24dp"
                 android:layout_marginEnd="24dp"
                 android:text="Submit"
                 app:layout_constraintEnd_toEndOf="@+id/Password_TextInputLayout"
+                app:layout_constraintHorizontal_bias="0.545"
                 app:layout_constraintStart_toStartOf="@+id/Password_TextInputLayout"
                 app:layout_constraintTop_toBottomOf="@+id/Password_TextInputLayout" />
 

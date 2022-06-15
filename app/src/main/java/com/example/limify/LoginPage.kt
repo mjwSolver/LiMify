@@ -1,5 +1,6 @@
 package com.example.limify
 
+import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
@@ -52,7 +53,7 @@ class LoginPage : AppCompatActivity() {
                     .addOnCompleteListener { mTask ->
                         if (mTask.isSuccessful) {
 
-                            val rbutton = bind.rememberMeRadioButton.isChecked
+                            val rbutton = bind.rememberMeCheckBox.isChecked
                             val sharedEditor: SharedPreferences.Editor = shared.edit()
                             sharedEditor.putString("username", username)
                                 .putString("password", password)
