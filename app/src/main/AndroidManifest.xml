@@ -14,18 +14,21 @@
         android:theme="@style/Theme.Limify01"
         tools:targetApi="31">
         <activity
-            android:name="com.example.limify.LoginPage"
+            android:name=".randomRedirect"
             android:exported="false" />
-<!--            android:exported="true" >-->
-<!--            <intent-filter>-->
-<!--                <action android:name="android.intent.action.MAIN" />-->
-<!--                <category android:name="android.intent.category.LAUNCHER" />-->
-<!--            </intent-filter>-->
-<!--        </activity>-->
         <activity
-            android:name="com.example.limify.SplashScreen"
+            android:name=".LoginPage"
+            android:exported="false" /> <!-- android:exported="true" > -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="android.intent.action.MAIN" /> -->
+        <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+        <!-- </intent-filter> -->
+        <!-- </activity> -->
+        <activity
+            android:name=".SplashScreen"
             android:exported="true">
-<!--            android:exported="false"/>-->
+
+            <!-- android:exported="false"/> -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -33,14 +36,12 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.limify.RegisterPage"
+            android:name=".RegisterPage"
             android:exported="false" />
         <activity
-            android:name="com.example.limify.MainActivity"
+            android:name=".MainActivity"
             android:exported="true"
-            android:label="@string/app_name"
-             />
-<!--        android:theme="@style/Theme.Limify01.NoActionBar"-->
+            android:label="@string/app_name" />
     </application>
 
 </manifest>

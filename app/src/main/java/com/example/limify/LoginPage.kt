@@ -1,8 +1,11 @@
 package com.example.limify
 
+import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.speech.RecognizerIntent
 import android.text.TextUtils
 import android.widget.Toast
 import com.example.limify.databinding.ActivityLoginPageBinding
@@ -12,85 +15,91 @@ import com.google.firebase.auth.FirebaseUser
 
 class LoginPage : AppCompatActivity() {
 
-    private lateinit var bind:ActivityLoginPageBinding;
+    lateinit var shared: SharedPreferences
+    private lateinit var bind:ActivityLoginPageBinding
+    var remember = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         bind = ActivityLoginPageBinding.inflate(layoutInflater)
         setContentView(bind.root)
 
-        bind.signUpButton.setOnClickListener {
+        checkRemember()
+        listeners()
 
-            var ausername = bind.usernameTextInputLayout.editText?.text.toString()
-            var apassword = bind.passwordTextInputLayout.editText?.text.toString()
+        bind.signInButton.setOnClickListener {
+
+            var ausername = bind.usernameTextInputLayout.editText?.text.toString().trim()
+            var apassword = bind.passwordTextInputLayout.editText?.text.toString().trim()
+
+            if(ausername.isEmpty() || apassword.isEmpty()) {
                 TextUtils.isEmpty(
                     bind.usernameTextInputLayout.editText?.text.toString().trim { it <= ' ' }) .apply {
-                Toast.makeText(this@LoginPage, "Please enter username.", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@LoginPage, "Please enter username.", Toast.LENGTH_SHORT).show()
                 }
 
                 TextUtils.isEmpty(
-                    bind.passwordTextInputLayout.editText?.text.toString().trim { it <= ' ' }).apply{
-                    Toast.makeText(this@LoginPage, "Please enter password.", Toast.LENGTH_SHORT).show()
+                    bind.passwordTextInputLayout.editText?.text.toString().trim { it <= ' ' }).apply {
+                    Toast.makeText(this@LoginPage, "Please enter password.", Toast.LENGTH_SHORT)
+                        .show()
                 }
+            } else {
+                val theBase = FirebaseAuth.getInstance()
+                val username: String = ausername
+                val password: String = apassword
 
-//                TextUtils.isEmpty(
-//                    bind.passwordTextInputLayout.editText?.text.toString().trim { it <= ' ' }) -> {
-//                    Toast.makeText(
-//                        this,
-//                        "Please enter password.",
-//                        Toast.LENGTH_SHORT
-//                    ).show()
-            if(ausername.isNotEmpty() && apassword.isNotEmpty()) {
+                theBase.signInWithEmailAndPassword(username, password)
+                    .addOnCompleteListener { mTask ->
+                        if (mTask.isSuccessful) {
 
-                    val theBase = FirebaseAuth.getInstance()
-                    val username: String = ausername.trim  { it <= ' ' }
-                    val password: String = apassword.trim { it <= ' ' }
+                            val rbutton = bind.rememberMeRadioButton.isChecked
+                            val sharedEditor: SharedPreferences.Editor = shared.edit()
+                            sharedEditor.putString("username", username)
+                                .putString("password", password)
+                                .putBoolean("remember", rbutton)
+                                .apply()
 
-                    // Create an instance and create a register a user with email and password.
-                    theBase.createUserWithEmailAndPassword(username, password)
-                    .addOnCompleteListener{ task ->
-//                    .addOnCompleteListener(OnCompleteListener<AuthResult> { task ->
-                        if (task.isSuccessful) {
-                            // Firebase registered user
-                            val firebaseUser: FirebaseUser = task.result!!.user!!
-
-                            Toast.makeText(
-                                this, "You are registered successfully.",
-                                Toast.LENGTH_SHORT
-                            ).show()
-
-                            val intent = Intent(this, RegisterPage::class.java).apply {
-                                putExtra("user_id", firebaseUser.uid)
-                                putExtra("pass_id", password)
-                                flags =
-                                    Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-                            }
+                            Toast.makeText(this, "Signed In Successfully", Toast.LENGTH_SHORT).show()
+                            val intent =
+//                                Intent(this, MainActivity::class.java).apply {
+                                Intent(this, randomRedirect::class.java).apply {
+//                                    putExtra("user_id", "You're in")
+//                                    putExtra("pass_id", password)
+                                }
                             startActivity(intent)
                             finish()
                         } else {
-                            theBase.signInWithEmailAndPassword(username, password)
-                            .addOnCompleteListener { mTask ->
-                                if (mTask.isSuccessful) {
-                                    val intent =
-                                        Intent(this, RegisterPage::class.java).apply {
-                                            putExtra("user_id", "You're in")
-                                            putExtra("pass_id", password)
-                                        }
-                                    startActivity(intent)
-                                    finish()
-                                } else {
-                                    // If the registering is not successful then show error message.
-                                    Toast.makeText(
-                                        this,
-                                        task.exception!!.message.toString(),
-                                        Toast.LENGTH_SHORT
-                                    ).show()
-                                }
-                            }
+                            Toast.makeText(
+                                this, mTask.exception!!.message.toString(), Toast.LENGTH_SHORT
+                            ).show()
                         }
-//                    })
                     }
+
                 }
             }
+    } // end of OnCreate
+
+    fun checkRemember() {
+        shared = getSharedPreferences("shared", Context.MODE_PRIVATE)
+        remember = shared.getBoolean("remember", false)
+
+        if(remember){
+//            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, randomRedirect::class.java)
+            startActivity(intent)
+            finish()
         }
-    }  // end of class
+
+    }
+
+    fun listeners() {
+
+        bind.RegisterButton.setOnClickListener{
+            val i = Intent(this, RegisterPage::class.java)
+            startActivity(i)
+
+        }
+
+    }
+
+}  // end of class

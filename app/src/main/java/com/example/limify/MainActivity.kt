@@ -7,13 +7,19 @@ import com.example.limify.fragments.AccountFragment
 import com.example.limify.fragments.CalendarFragment
 import com.example.limify.fragments.HomeFragment
 import com.example.limify.fragments.InputFragment
-import com.example.limify01.R
+import com.example.limify.R
+import com.example.limify.databinding.ActivityMainBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
+
+//    private lateinit var bind:ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+//        bind = ActivityMainBinding.inflate(layoutInflater)
         setContentView(R.layout.activity_main)
+//        setContentView(bind.root)
 
         val homeFragment = HomeFragment()
         val inputFragment = InputFragment()
