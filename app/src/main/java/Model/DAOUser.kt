@@ -26,7 +26,9 @@ class DAOUser () {
         return databaseReference.child(key).updateChildren(hmap as Map<String, Any>)
     }
 
-    var hmap = HashMap<String, Object>()
+    fun delete(key:String): Task<Void>{
+        return databaseReference.child(key).removeValue()
+    }
 
 
 }
