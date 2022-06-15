@@ -11,6 +11,9 @@
         <item name="colorOnPrimary">@color/KindaWhite</item>
 <!--        <item name="android:background">@color/DarkBlue</item>-->
 
+<!--        <item name="android:background">@color/LightBlue</item>-->
+<!--        <item name="android:windowBackground">@color/LightBlue</item>-->
+<!--        <item name="android:colorBackground">@color/LightBlue</item>-->
 
         <!-- Secondary Default brand color. -->
         <!--        <item name="colorSecondary">@color/teal_200</item>-->
@@ -30,12 +33,14 @@
 <!--        <item name="windowActionBar">false</item>-->
 <!--        <item name="windowNoTitle">true</item>-->
 <!--    </style>-->
+<!--    <style name="Theme.Limify01.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />-->
+<!--    <style name="Theme.Limify01.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />-->
 
-    <style name="Theme.Limify01.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
-
-    <style name="Theme.Limify01.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
-
-<!--    <style name="corneredBox15" >-->
-<!--        <item name="corner15dp">@</item>-->
+<!--    <style name="AppTheme" parent="android:Theme.Light">-->
+<!--        <item name="android:background">@color/LightBlue</item>-->
+<!--        <item name="android:windowBackground">@color/LightBlue</item>-->
+<!--        <item name="android:colorBackground">@color/LightBlue</item>-->
 <!--    </style>-->
+
+
 </resources>

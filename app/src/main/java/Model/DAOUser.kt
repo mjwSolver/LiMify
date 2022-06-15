@@ -1,23 +1,32 @@
 package Model
 
+import com.google.android.gms.common.api.ResultTransform
 import com.google.android.gms.tasks.Task
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
+import java.util.*
+import kotlin.collections.HashMap
 
-class DAOUser {
+class DAOUser () {
 
         var db: FirebaseDatabase = FirebaseDatabase.getInstance()
-//        var databaseReference = db.getReference(User.class.getSimpleName());
+        var databaseReference = db.getReference("Users")
 
-//    class DAOUser constructor() {
-//
-//    }
+    class DAOUser constructor() {
 
-//    fun add:Task<Void>(val use: User) {
+    }
+
+    fun add(use: User): Task<Void> {
 //        if(use != null) {
-//            databaseReference.push().setValue(use)
+            return databaseReference.push().setValue(use)
 //        }
-//    }
+    }
+
+    fun update(key: String, hmap:HashMap<String, Objects>): Task<Void> {
+        return databaseReference.child(key).updateChildren(hmap as Map<String, Any>)
+    }
+
+    var hmap = HashMap<String, Object>()
 
 
 }
