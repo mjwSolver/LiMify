@@ -7,7 +7,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import com.example.limify.RecyclerviewActivity
 import com.example.limify.databinding.FragmentMenu4Binding
 
 
@@ -24,10 +23,6 @@ class Menu4Fragment : Fragment() {
         viewBind = FragmentMenu4Binding.inflate(layoutInflater, container, false)
 
         viewBind.title.text = "Menu terakhir di menu 4. Bisa coba klik button!"
-        viewBind.testbutton.setOnClickListener{
-            Toast.makeText(context, "Clicked", Toast.LENGTH_LONG).show()
-            startActivity(Intent(context, RecyclerviewActivity::class.java))
-        }
 
         return viewBind.root
     }

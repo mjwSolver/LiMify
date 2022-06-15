@@ -1,11 +1,12 @@
-package com.example.limify01.model
+package Model
 
 import android.os.Parcel
 import android.os.Parcelable
 
 open class Keuangan(
-
+    var uang:String?,
     var catatan:String?,
+    var tipe:String?,
     var jenis:String?,
     var waktu:String?,
     var uid:String?
@@ -14,12 +15,16 @@ open class Keuangan(
         parcel?.readString(),
         parcel?.readString(),
         parcel?.readString(),
+        parcel?.readString(),
+        parcel?.readString(),
         parcel?.readString()
     ) {
     }
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {
+        parcel.writeString(uang)
         parcel.writeString(catatan)
+        parcel.writeString(tipe)
         parcel.writeString(jenis)
         parcel.writeString(waktu)
         parcel.writeString(uid)

@@ -9,6 +9,7 @@ import com.example.limify.databinding.FragmentMenu1Binding
 
 
 
+
 class Menu1Fragment : Fragment() {
 
     private lateinit var viewBind: FragmentMenu1Binding
