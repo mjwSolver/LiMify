@@ -26,56 +26,38 @@ class RegisterPage : AppCompatActivity() {
     } // end of On Create
 
 
-//    binding.registerBtn.setOnClickListener { it: View!
-//
-//        val firstName = binding.firstName.text.toString()
-//        val lastName = binding.lastName.text.toString()
-//        val age = binding.age.text.toString()
-//        val userName = binding.userName.text.toString()
-//
-//        database FirebaseDatabase.getInstance().getReference( path: "Users")
-//        val User = User (firstName, lastName, age, userName)
-//
-//        database.child(userName).setValue(User).addOnSuccessListener {
-//
-//            binding.firstName.text.clear()
-//            binding.lastName.text.clear()
-//            binding.age.text.clear()
-//            binding.userName.text.clear()
-//
-//            Toast.makeText( context: this, text: "Successfully Saved", Toast.LENGTH_SHORT).show()
-//        }).addOnFailureListener{
-//            Toast JakeText(context this, text "Failed", Toast.LENGTH_SHORT).show()
-//        }
-//
-//    }
-
-
-
     fun registerListener() {
 
         bind.RegisterButton.setOnClickListener{
 
-            var ausername = bind.usernameTextInputLayout.editText?.text.toString().trim()
+            var aemail = bind.emailTextInputLayout.editText?.text.toString().trim()
+//            var ausername = bind.usernameTextInputLayout.editText?.text.toString().trim()
             var apassword = bind.passwordTextInputLayout.editText?.text.toString().trim()
 
-            if(ausername.isEmpty() || apassword.isEmpty()) {
-                TextUtils.isEmpty(
-                    bind.usernameTextInputLayout.editText?.text.toString().trim { it <= ' ' }) .apply {
-                    Toast.makeText(this@RegisterPage, "Please enter username.", Toast.LENGTH_SHORT).show()
-                }
+            if(apassword.isEmpty() || aemail.isEmpty()) {
+//            if(ausername.isEmpty() || apassword.isEmpty() || aemail.isEmpty()) {
+//                TextUtils.isEmpty(
+//                    bind.usernameTextInputLayout.editText?.text.toString().trim { it <= ' ' }) .apply {
+//                    Toast.makeText(this@RegisterPage, "Please enter username.", Toast.LENGTH_SHORT).show()
+//                }
 
                 TextUtils.isEmpty(
                     bind.passwordTextInputLayout.editText?.text.toString().trim { it <= ' ' }).apply {
                     Toast.makeText(this@RegisterPage, "Please enter password.", Toast.LENGTH_SHORT)
                         .show()
                 }
+
+                TextUtils.isEmpty(
+                    bind.emailTextInputLayout.editText?.text.toString().trim { it <= ' ' }).apply {
+                    Toast.makeText(this@RegisterPage, "Please enter email.", Toast.LENGTH_SHORT)
+                        .show()
+                }
             } else {
                 val theBase = FirebaseAuth.getInstance()
-                val username: String = ausername
+                val email: String = aemail
                 val password: String = apassword
 
-                theBase.createUserWithEmailAndPassword(username, password)
+                theBase.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener { task ->
                     if (task.isSuccessful) {
                         val firebaseUser: FirebaseUser = task.result!!.user!!
@@ -91,13 +73,6 @@ class RegisterPage : AppCompatActivity() {
                 }
             }
         }
-
-
-//        val userId = intent.getStringExtra( "user_id")
-//        val passId = intent.getStringExtra( "pass_id")
-//
-//        bind.usernameTextView.text = "User ID :: $userId"
-//        bind.passwordTextView.text = "Password ID :: $passId"
 
     } // end of RegisterListener
 

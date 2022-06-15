@@ -19,7 +19,7 @@ import java.util.ArrayList
 class Menu3Fragment : Fragment(),CardListener {
 
     private lateinit var viewBind: FragmentMenu3Binding
-    private val adapter = ListDataAdapter(GlobalVar.listHistoryRecycle, this)
+//    private val adapter = ListDataAdapter(GlobalVar.listHistoryRecycle, this)
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -38,27 +38,28 @@ class Menu3Fragment : Fragment(),CardListener {
 
             val layoutManager = LinearLayoutManager(requireActivity().baseContext)
             viewBind.lvHistoryView.layoutManager= layoutManager
-            viewBind.lvHistoryView.adapter=adapter// Set layout
+//            viewBind.lvHistoryView.adapter=adapter// Set layout
         }
     private fun showFirst(){
         var a=0
-        GlobalVar.seelist=true
+//        GlobalVar.seelist=true
 
-        for (x in 0..GlobalVar.listDataKeuangan.size-1){
+        {
+//        for (x in 0..GlobalVar.listDataKeuangan.size-1){
             val jangka="alltime"
 
             val temp = HistoryRecycle(jangka,a)
             a++
-            temp.addParent(GlobalVar.listDataKeuangan.get(x))
+//            temp.addParent(GlobalVar.listDataKeuangan.get(x))
 
-            GlobalVar.listHistoryRecycle.add(temp)
+//            GlobalVar.listHistoryRecycle.add(temp)
 
         }
-        adapter.notifyDataSetChanged()
+//        adapter.notifyDataSetChanged()
     }
     override fun onResume() {
         super.onResume()
-        adapter.notifyDataSetChanged()
+//        adapter.notifyDataSetChanged()
     }
 
 

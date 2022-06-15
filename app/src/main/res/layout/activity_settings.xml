@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettingsActivity"
+    android:background="@color/DarkBlue">
+
+    <TextView
+        android:id="@+id/settingsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/lemonregular"
+        android:text="Settings"
+        android:textColor="@color/JustYellow"
+        android:textSize="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/deleteMyAccountButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="52dp"
+        android:backgroundTint="@color/LightBlue"
+        android:text="Delete My Account"
+        app:layout_constraintStart_toStartOf="@+id/settingsTextView"
+        app:layout_constraintTop_toBottomOf="@+id/settingsTextView" />
+
+    <Button
+        android:id="@+id/changePlansButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:backgroundTint="@color/LightBlue"
+        android:text="Change Plans"
+        app:layout_constraintStart_toStartOf="@+id/deleteMyAccountButton"
+        app:layout_constraintTop_toBottomOf="@+id/deleteMyAccountButton" />
+
+    <TextView
+        android:id="@+id/emailTextField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="48dp"
+        android:text="TextView"
+        android:textColor="@color/KindaWhite"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/changePlansButton" />
+
+    <TextView
+        android:id="@+id/passwordTextField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="92dp"
+        android:text="TextView"
+        android:textColor="@color/KindaWhite"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/changePlansButton" />
+
+    <ImageButton
+        android:id="@+id/settingsBackButton"
+        android:layout_width="78dp"
+        android:layout_height="67dp"
+        android:layout_marginStart="135dp"
+        android:layout_marginTop="18dp"
+        android:backgroundTint="@android:color/transparent"
+        app:layout_constraintStart_toEndOf="@+id/settingsTextView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_arrow_back_24"
+        tools:ignore="SpeakableTextPresentCheck"
+        app:tint="@color/KindaWhite" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -2,11 +2,12 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ConstraintLayoutOutside"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegisterPage"
-    android:background="@color/LightBlue">
-<!--    tools:context=".RegisterPage">-->
+    android:background="@color/LightBlue"
+    tools:context=".RegisterPage">
+    <!--    tools:context=".RegisterPage">-->
 
     <ScrollView
         android:id="@+id/scrollView2"
@@ -43,14 +44,46 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/LiMifyTitleImageView" />
 
-<!--                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"-->
+            <!--                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"-->
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/usernameTextInputLayout"
+                style="@style/overrideOverlay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="24dp"
+                app:boxCornerRadiusBottomEnd="15dp"
+                app:boxCornerRadiusBottomStart="15dp"
+                app:boxCornerRadiusTopEnd="15dp"
+                app:boxCornerRadiusTopStart="15dp"
+                app:boxStrokeColor="@color/DarkBlue"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp"
+                app:endIconMode="clear_text"
+                app:endIconTint="@color/DarkBlue"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/LetsTextView"
+                app:startIconDrawable="@drawable/ic_baseline_person_24"
+                app:startIconTint="@color/DarkBlue">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/KindaWhite"
+                    android:textColor="@color/DarkBlue"
+                    android:textColorHighlight="@color/StrongOrange"
+                    android:hint="Username" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/emailTextInputLayout"
                 style="@style/overrideOverlay"
                 android:layout_width="0dp"
                 android:layout_height="55dp"
                 android:layout_marginStart="24dp"
-                android:layout_marginTop="32dp"
+                android:layout_marginTop="24dp"
                 android:layout_marginEnd="24dp"
                 app:boxCornerRadiusBottomEnd="15dp"
                 app:boxCornerRadiusBottomStart="15dp"
@@ -59,27 +92,28 @@
                 app:boxStrokeWidth="0dp"
                 app:boxStrokeWidthFocused="0dp"
                 app:endIconMode="clear_text"
-                app:startIconTint="@color/DarkBlue"
                 app:endIconTint="@color/DarkBlue"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/LetsTextView"
-                app:startIconDrawable="@drawable/ic_baseline_person_24">
+                app:layout_constraintTop_toBottomOf="@+id/usernameTextInputLayout"
+                app:startIconDrawable="@drawable/ic_baseline_email_24"
+                app:startIconTint="@color/DarkBlue">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:backgroundTint="@color/KindaWhite"
+                    android:hint="Email"
                     android:textColor="@color/DarkBlue"
                     android:textColorHint="@color/DarkBlue"
                     android:textColorLink="@color/DarkBlue"
-                    android:hint="Email"
 
                     />
 
             </com.google.android.material.textfield.TextInputLayout>
 
-<!--                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"-->
+            <!--                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"-->
+
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/passwordTextInputLayout"
                 style="@style/overrideOverlay"
@@ -96,21 +130,21 @@
                 app:boxStrokeWidthFocused="0dp"
                 app:endIconMode="password_toggle"
                 app:endIconTint="@color/DarkBlue"
-                app:startIconTint="@color/DarkBlue"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/usernameTextInputLayout"
-                app:startIconDrawable="@drawable/ic_baseline_lock_24">
+                app:layout_constraintTop_toBottomOf="@+id/emailTextInputLayout"
+                app:startIconDrawable="@drawable/ic_baseline_lock_24"
+                app:startIconTint="@color/DarkBlue">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:backgroundTint="@color/KindaWhite"
+                    android:hint="Password"
                     android:inputType="textPassword"
                     android:textColor="@color/DarkBlue"
                     android:textColorHint="@color/DarkBlue"
-                    android:textColorLink="@color/DarkBlue"
-                    android:backgroundTint="@color/KindaWhite"
-                    android:hint="Password" />
+                    android:textColorLink="@color/DarkBlue" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <Button

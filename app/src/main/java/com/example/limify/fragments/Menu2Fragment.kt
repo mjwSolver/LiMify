@@ -112,7 +112,7 @@ class Menu2Fragment : Fragment() {
                 var tes: Keuangan = Keuangan(pengeluaran,catatan,tipe,text,currentDate,GlobalVar.uid)
 
 
-                GlobalVar.listDataKeuangan.add(tes)
+//                GlobalVar.listDataKeuangan.add(tes)
 
                 Toast.makeText(context, "Data sukses disimpan!", Toast.LENGTH_LONG).show()
                 val intent = Intent(context, BottomnavbarActivity::class.java)

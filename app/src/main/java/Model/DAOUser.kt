@@ -1,6 +1,6 @@
 package Model
 
-import com.example.limify01.model.User
+import User
 import com.google.android.gms.common.api.ResultTransform
 import com.google.android.gms.tasks.Task
 import com.google.firebase.database.DatabaseReference
@@ -17,7 +17,7 @@ class DAOUser () {
 
     }
 
-    fun add(use: User): Task<Void> {
+    fun add(use: User, userName:String): Task<Void> {
 //        if(use != null) {
             return databaseReference.push().setValue(use)
 //        }
