@@ -57,7 +57,7 @@ class RegisterPage : AppCompatActivity() {
                                 this, "Successfully Registered", Toast.LENGTH_SHORT
                             ).show()
 
-                            val intent = Intent(this, MainActivity::class.java).apply {
+                            val intent = Intent(this, LoginPage::class.java).apply {
 //                            putExtra("user_id", firebaseUser.uid)
 //                            putExtra("pass_id", password)
 //                            flags =

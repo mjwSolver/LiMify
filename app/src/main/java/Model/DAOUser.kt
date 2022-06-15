@@ -1,5 +1,6 @@
 package Model
 
+import com.example.limify01.model.User
 import com.google.android.gms.common.api.ResultTransform
 import com.google.android.gms.tasks.Task
 import com.google.firebase.database.DatabaseReference

@@ -13,5 +13,14 @@
     <string name="input">input</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_form">tittle_form</string>
+
+    <string-array name="jenis">
+        <item>Kebutuhan Pokok</item>
+        <item>Keinginan</item>
+    </string-array>
+
+    <string name="selected_item">Selected item:</string>
+    <string name="HistoryKeuangan">HistoryKeuangan</string>
 
 </resources>
