@@ -15,9 +15,6 @@ import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.Fragment
-import com.example.limify.BottomnavbarActivity
-import com.example.limify.PemasukanActivity
-import com.example.limify.R
 import com.example.limify.databinding.FragmentMenu2Binding
 import java.text.SimpleDateFormat
 import java.util.*
@@ -115,7 +112,7 @@ class Menu2Fragment : Fragment() {
                 val currentDat = adf.format(Date())
 
                 var tes: Keuangan = Keuangan(pengeluaran,catatan,tipe,text,currentDate,GlobalVar.uid)
-                var test: KeuanganHarian = KeuanganHarian(pengeluaran,text,currentDat)
+                var test: KeuanganHarian = KeuanganHarian(pengeluaran,text,currentDat,GlobalVar.uid)
                 var temp = PengeluaranHarian(tipe)
                 temp.addParent(test)
                 GlobalVar.listDataKeluarHarian.add(temp)

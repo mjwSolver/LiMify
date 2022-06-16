@@ -13,8 +13,4 @@
         android:id="@+id/menu3_menu"
         android:icon="@drawable/calendar"
         android:title="History" />
-    <item
-        android:id="@+id/menu4_menu"
-        android:icon="@drawable/account"
-        android:title="Menu 4" />
 </menu>

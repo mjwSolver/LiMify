@@ -10,6 +10,7 @@ class PengeluaranHarian(
         this.uang=keuanganHarian.uang
         this.jenis=keuanganHarian.jenis
         this.dotd=keuanganHarian.dotd
+        this.uid=keuanganHarian.uid
     }
 
 }

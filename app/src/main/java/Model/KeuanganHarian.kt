@@ -6,19 +6,14 @@ import android.os.Parcelable
 open class KeuanganHarian (
     var uang:String?,
     var jenis:String?,
-    var dotd:String?
-<<<<<<< Updated upstream
+    var dotd:String?,
+    var uid:String?
 ) : Parcelable {
-    constructor(parcel: Parcel) : this(
-        parcel.readString(),
-        parcel.readString(),
-        parcel.readString()
-=======
-): Parcelable {
     constructor(parcel: Parcel?) : this(
         parcel?.readString(),
+        parcel?.readString(),
+        parcel?.readString(),
         parcel?.readString()
->>>>>>> Stashed changes
     ) {
     }
 
@@ -26,6 +21,7 @@ open class KeuanganHarian (
         parcel.writeString(uang)
         parcel.writeString(jenis)
         parcel.writeString(dotd)
+        parcel.writeString(uid)
     }
 
     override fun describeContents(): Int {

@@ -6,7 +6,6 @@ import androidx.fragment.app.Fragment
 import com.example.limify.databinding.ActivityBottomnavbarBinding
 import com.example.limify01.Menu1Fragment
 import com.example.limify01.Menu3Fragment
-import com.example.limify01.Menu4Fragment
 
 
 class BottomnavbarActivity : AppCompatActivity() {
@@ -25,7 +24,6 @@ class BottomnavbarActivity : AppCompatActivity() {
                 R.id.menu1_menu -> SetCurrentFragment(Menu1Fragment())
                 R.id.menu2_menu -> SetCurrentFragment(Menu2Fragment())
                 R.id.menu3_menu -> SetCurrentFragment(Menu3Fragment())
-                R.id.menu4_menu -> SetCurrentFragment(Menu4Fragment())
             }
             true
         }

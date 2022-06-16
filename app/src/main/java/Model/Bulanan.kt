@@ -7,18 +7,15 @@ data class Bulanan(
     var kebutuhan:String?,
     var keinginan:String?,
     var investasi:String?,
-    var dom:String?
+    var dom:String?,
+    var uid:String?
 ) : Parcelable {
     constructor(parcel: Parcel) : this(
-<<<<<<< Updated upstream
+        parcel.readString(),
         parcel.readString(),
         parcel.readString(),
         parcel.readString(),
         parcel.readString()
-=======
-        parcel?.readString(),
-        parcel?.readString()
->>>>>>> Stashed changes
     ) {
     }
 
@@ -27,6 +24,7 @@ data class Bulanan(
         parcel.writeString(keinginan)
         parcel.writeString(investasi)
         parcel.writeString(dom)
+        parcel.writeString(uid)
     }
 
     override fun describeContents(): Int {

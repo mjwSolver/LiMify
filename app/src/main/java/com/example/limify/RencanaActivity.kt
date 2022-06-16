@@ -1,11 +1,14 @@
 package com.example.limify
 
+import Database.GlobalVar
 import Database.GlobalVar.Companion.luaran
 import Database.GlobalVar.Companion.masukan
 import Database.GlobalVar.Companion.monthing
 import Database.GlobalVar.Companion.needing
 import Database.GlobalVar.Companion.saving
 import Database.GlobalVar.Companion.wanting
+import Model.Bulanan
+import Model.Keuangan
 import android.content.Intent
 import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
@@ -13,6 +16,8 @@ import android.os.Bundle
 import android.text.TextUtils
 import android.widget.Toast
 import com.example.limify.databinding.ActivityRencanaBinding
+import java.text.SimpleDateFormat
+import java.util.*
 
 class RencanaActivity : AppCompatActivity() {
 
@@ -92,7 +97,22 @@ class RencanaActivity : AppCompatActivity() {
 //                saving = savings
 
                 monthing = month
+                var a = bind.masukPerBulanTextInputLayout.editText?.text.toString()
+                     var b= a.toLong()
+                    var c= bind.pengeluaranSudahTextInputLayout.editText?.text.toString()
+                    var d=c.toLong()
+                var e = b-d
+                    var kebutuhan = e*0.5
+                    var kebutuhan2 = kebutuhan.toString()
+                    var keinginan = e*0.3
+                    var keinginan2 = keinginan.toString()
+                    var investasi = e*0.2
+                    var investasi2 = investasi.toString()
+                    val adf = SimpleDateFormat("dd/M/yyyy")
+                    val currentDat = adf.format(Date())
 
+                    var tes: Bulanan = Bulanan(kebutuhan2,keinginan2,investasi2,currentDat,GlobalVar.uid)
+                    GlobalVar.listDataBulanan.add(tes)
                 val intenting = Intent(this, BottomnavbarActivity::class.java)
                 startActivity(intenting)
                 finish()
