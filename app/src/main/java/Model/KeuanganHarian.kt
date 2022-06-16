@@ -7,13 +7,15 @@ open class KeuanganHarian (
     var uang:String?,
     var jenis:String?,
     var dotd:String?,
-    var uid:String?
+    var uid:String?,
+
+
 ) : Parcelable {
     constructor(parcel: Parcel?) : this(
         parcel?.readString(),
         parcel?.readString(),
         parcel?.readString(),
-        parcel?.readString()
+        parcel?.readString(),
     ) {
     }
 

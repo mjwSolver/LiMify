@@ -136,16 +136,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pembagianTextView4"
-        app:prefixText="50"
         app:startIconDrawable="@drawable/ic_baseline_payments_24"
-        app:startIconTint="@color/DarkBlue"
-        app:suffixText="%">
+        app:startIconTint="@color/DarkBlue">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/KindaWhite"
-            android:hint="Needs"
+            android:hint="Needs = 50%"
             android:inputType="number"
             android:maxLength="3"
             android:textColor="@color/DarkBlue"
@@ -170,16 +168,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/needTextInputLayout"
-        app:prefixText="30"
         app:startIconDrawable="@drawable/ic_baseline_thumb_up_24"
-        app:startIconTint="@color/DarkBlue"
-        app:suffixText="%">
+        app:startIconTint="@color/DarkBlue">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/KindaWhite"
-            android:hint="Wants"
+            android:hint="Wants = 30%"
             android:inputType="number"
             android:maxLength="3"
             android:textColor="@color/DarkBlue"
@@ -205,16 +201,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/wantsTextInputLayout"
-        app:prefixText="20"
         app:startIconDrawable="@drawable/ic_baseline_savings_24"
-        app:startIconTint="@color/DarkBlue"
-        app:suffixText="%">
+        app:startIconTint="@color/DarkBlue">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/KindaWhite"
-            android:hint="Savings"
+            android:hint="Savings = 20%"
             android:inputType="number"
             android:maxLength="3"
             android:textColor="@color/DarkBlue"

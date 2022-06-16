@@ -33,21 +33,17 @@ class rencanaanActivity : AppCompatActivity() {
         settingUp()
         saveChanges()
 
-
-
     }
 
     fun back() { bind.backImageButton.setOnClickListener{   finish()  }  }
 
     fun settingUp() {
-
         bind.masukPerBulanTextInputLayout.editText?.setText(masukan)
         bind.pengeluaranSudahTextInputLayout.editText?.setText(luaran)
         bind.needTextInputLayout.editText?.setText(needing)
         bind.wantsTextInputLayout.editText?.setText(wanting)
         bind.savingsTextInputLayout.editText?.setText(saving)
         if (monthing) bind.defaultMonthlyCheckBoxan.isPressed
-
 
     }
 

@@ -16,6 +16,7 @@ data class Bulanan(
         parcel.readString(),
         parcel.readString(),
         parcel.readString()
+
     ) {
     }
 

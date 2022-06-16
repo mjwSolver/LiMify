@@ -89,7 +89,7 @@ class LoginPage : AppCompatActivity() {
                             Toast.makeText(this, "Signed In Successfully", Toast.LENGTH_SHORT).show()
                             val intent =
 //                                Intent(this, MainActivity::class.java).apply {
-                                Intent(this, RencanaActivity::class.java).apply {
+                                Intent(this, rencanaanActivity::class.java).apply {
 //                                Intent(this, randomRedirect::class.java).apply {
 //                                    putExtra("user_id", "You're in")
 //                                    putExtra("pass_id", password)

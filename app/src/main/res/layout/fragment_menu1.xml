@@ -4,34 +4,320 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#EC407A"
+    android:background="@color/LightBlue"
     tools:context="com.example.limify01.Menu1Fragment">
 
     <!-- TODO: Update blank fragment layout -->
+
     <TextView
-        android:id="@+id/title_menu1"
+        android:id="@+id/pemasukanTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:text="Pemasukan hari ini"
+        android:textColor="@color/KindaWhite"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wantsPengeluaranTextInputLayout" />
+
+    <TextView
+        android:id="@+id/PengeluaranTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello_blank_fragment"
-        android:textColor="#FFFFFF"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:text="Home"
+        android:textColor="@color/KindaWhite"
+        android:textSize="32sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/terpakaiTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:text="Pengeluaran Hari ini (kepakai)"
+        android:textColor="@color/KindaWhite"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PengeluaranTextView" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/needPengeluaranTextInputLayout"
+        style="@style/overrideOverlay"
+        android:layout_width="0dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:enabled="false"
+        app:boxCornerRadiusBottomEnd="15dp"
+        app:boxCornerRadiusBottomStart="15dp"
+        app:boxCornerRadiusTopEnd="15dp"
+        app:boxCornerRadiusTopStart="15dp"
+        app:boxStrokeColor="@color/LightBlue"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeWidthFocused="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/terpakaiTextView"
+        app:startIconDrawable="@drawable/ic_baseline_payments_24"
+        app:startIconTint="@color/DarkBlue">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/KindaWhite"
+            android:hint="Pengeluaran Needs"
+            android:inputType="number"
+            android:maxLength="3"
+            android:textColor="@color/DarkBlue"
+            android:textColorHighlight="@color/StrongOrange" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/wantsPengeluaranTextInputLayout"
+        style="@style/overrideOverlay"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:enabled="false"
+        app:boxCornerRadiusBottomEnd="15dp"
+        app:boxCornerRadiusBottomStart="15dp"
+        app:boxCornerRadiusTopEnd="15dp"
+        app:boxCornerRadiusTopStart="15dp"
+        app:boxStrokeColor="@color/LightBlue"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeWidthFocused="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/needPengeluaranTextInputLayout"
+        app:startIconDrawable="@drawable/ic_baseline_thumb_up_24"
+        app:startIconTint="@color/DarkBlue">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/KindaWhite"
+            android:hint="Pengeluaran Wants"
+            android:inputType="number"
+            android:maxLength="3"
+            android:textColor="@color/DarkBlue"
+            android:textColorHighlight="@color/StrongOrange" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/pengeluaranSudahTextInputLayout"
+        style="@style/overrideOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        app:boxCornerRadiusBottomEnd="15dp"
+        app:boxCornerRadiusBottomStart="15dp"
+        app:boxCornerRadiusTopEnd="15dp"
+        app:boxCornerRadiusTopStart="15dp"
+        app:boxStrokeColor="@color/LightBlue"
+        app:boxStrokeErrorColor="@color/StrongOrange"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeWidthFocused="0dp"
+        app:endIconMode="clear_text"
+        app:endIconTint="@color/DarkBlue"
+        app:layout_constraintDimensionRatio="w,1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pemasukanTextView"
+        app:prefixText="Rp. "
+        app:startIconDrawable="@drawable/ic_baseline_payments_24"
+        app:startIconTint="@color/DarkBlue"
+        app:suffixText=",00-">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/KindaWhite"
+            android:hint="Pemasukan hari ini"
+            android:inputType="number"
+            android:textColor="@color/DarkBlue"
+            android:textColorHighlight="@color/StrongOrange"
+            tools:ignore="DuplicateSpeakableTextCheck" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
     <ImageButton
         android:id="@+id/settingsButton"
-        android:layout_width="65dp"
-        android:layout_height="51dp"
+        android:layout_width="38dp"
+        android:layout_height="46dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="24dp"
         android:background="@android:color/transparent"
         android:src="@drawable/setting"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:tint="@color/DarkBlue"
-        tools:ignore="SpeakableTextPresentCheck" />
+        app:tint="@color/KindaWhite"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/masukPerBulanTextInputLayout"
+        style="@style/overrideOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        app:boxCornerRadiusBottomEnd="15dp"
+        app:boxCornerRadiusBottomStart="15dp"
+        app:boxCornerRadiusTopEnd="15dp"
+        app:boxCornerRadiusTopStart="15dp"
+        app:boxStrokeColor="@color/LightBlue"
+        app:boxStrokeErrorColor="@color/StrongOrange"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeWidthFocused="0dp"
+        app:endIconMode="clear_text"
+        app:endIconTint="@color/DarkBlue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pengeluaranSudahTextInputLayout"
+        app:prefixText="Rp. "
+        app:startIconDrawable="@drawable/ic_baseline_thumb_up_24"
+        app:startIconTint="@color/DarkBlue"
+        app:suffixText=",00-">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/KindaWhite"
+            android:hint="Pemasukan per Bulan"
+            android:inputType="number"
+            android:textColor="@color/DarkBlue"
+            android:textColorHighlight="@color/StrongOrange" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/expenceCard"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/masukPerBulanTextInputLayout">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cardConstrain"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/needTextInputLayout"
+                style="@style/overrideOverlay"
+                android:layout_width="0dp"
+                android:layout_height="51dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="24dp"
+                android:enabled="false"
+                app:boxCornerRadiusBottomEnd="15dp"
+                app:boxCornerRadiusBottomStart="15dp"
+                app:boxCornerRadiusTopEnd="15dp"
+                app:boxCornerRadiusTopStart="15dp"
+                app:boxStrokeColor="@color/LightBlue"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/cardConstrain"
+                app:startIconDrawable="@drawable/ic_baseline_payments_24"
+                app:startIconTint="@color/DarkBlue">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/KindaWhite"
+                    android:hint="Makan Pagi"
+                    android:inputType="number"
+                    android:maxLength="3"
+                    android:textColor="@color/DarkBlue"
+                    android:textColorHighlight="@color/StrongOrange" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/wantsTextInputLayout"
+                style="@style/overrideOverlay"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="24dp"
+                android:enabled="false"
+                app:boxCornerRadiusBottomEnd="15dp"
+                app:boxCornerRadiusBottomStart="15dp"
+                app:boxCornerRadiusTopEnd="15dp"
+                app:boxCornerRadiusTopStart="15dp"
+                app:boxStrokeColor="@color/LightBlue"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/needTextInputLayout"
+                app:startIconDrawable="@drawable/ic_baseline_thumb_up_24"
+                app:startIconTint="@color/DarkBlue">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/KindaWhite"
+                    android:hint="Wants = 30%"
+                    android:inputType="number"
+                    android:maxLength="3"
+                    android:textColor="@color/DarkBlue"
+                    android:textColorHighlight="@color/StrongOrange" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/savingsTextInputLayout"
+                style="@style/overrideOverlay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginBottom="16dp"
+                android:enabled="false"
+                app:boxCornerRadiusBottomEnd="15dp"
+                app:boxCornerRadiusBottomStart="15dp"
+                app:boxCornerRadiusTopEnd="15dp"
+                app:boxCornerRadiusTopStart="15dp"
+                app:boxStrokeColor="@color/LightBlue"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/wantsTextInputLayout"
+                app:startIconDrawable="@drawable/ic_baseline_savings_24"
+                app:startIconTint="@color/DarkBlue">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/KindaWhite"
+                    android:hint="Savings = 20%"
+                    android:inputType="number"
+                    android:maxLength="3"
+                    android:textColor="@color/DarkBlue"
+                    android:textColorHighlight="@color/StrongOrange" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
