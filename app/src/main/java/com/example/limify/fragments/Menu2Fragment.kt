@@ -2,6 +2,8 @@ package com.example.limify01
 
 import Database.GlobalVar
 import Model.Keuangan
+import Model.KeuanganHarian
+import Model.PengeluaranHarian
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -108,11 +110,15 @@ class Menu2Fragment : Fragment() {
                 val tipe="Pengeluaran"
                 val sdf = SimpleDateFormat("dd/M/yyyy hh:mm:ss")
                 val currentDate = sdf.format(Date())
+                val adf = SimpleDateFormat("dd/M/yyyy")
+                val currentDat = adf.format(Date())
 
                 var tes: Keuangan = Keuangan(pengeluaran,catatan,tipe,text,currentDate,GlobalVar.uid)
-
-
-//                GlobalVar.listDataKeuangan.add(tes)
+                var test: KeuanganHarian = KeuanganHarian(pengeluaran,currentDat)
+                var temp = PengeluaranHarian(tipe)
+                temp.addParent(test)
+                GlobalVar.listDataKeluarHarian.add(temp)
+                   GlobalVar.listDataKeuangan.add(tes)
 
                 Toast.makeText(context, "Data sukses disimpan!", Toast.LENGTH_LONG).show()
                 val intent = Intent(context, BottomnavbarActivity::class.java)

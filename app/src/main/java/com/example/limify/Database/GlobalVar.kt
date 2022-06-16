@@ -1,5 +1,6 @@
 package Database
 
+import Model.*
 import User
 
 //import com.example.limify01.model.Pemasukkan
@@ -8,12 +9,17 @@ import User
 
 class GlobalVar {
     companion object{
+
+
+
         var uid = ""
         val STORAGE_PERMISSION_CODE: Int = 100
         val listDataUser = ArrayList<User>()
-//        val listDataPengeluaran = ArrayList<Pengeluaran>()
-//        val listDataPemasukkann = ArrayList<Pemasukkan>()
-
+        val listDataKeuangan = ArrayList<Keuangan>()
+        val listHistoryRecycle = ArrayList<HistoryRecycle>()
+        val listDataMasukHarian = ArrayList<PemasukanHarian>()
+        val listDataKeluarHarian = ArrayList<PengeluaranHarian>()
+        var listDataBulanan = ArrayList<Bulanan>()
         var emailUser:String = ""
         var passUser:String = ""
 

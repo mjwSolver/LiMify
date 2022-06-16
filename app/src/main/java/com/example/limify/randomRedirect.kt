@@ -42,7 +42,7 @@ class randomRedirect : AppCompatActivity() {
 
     fun listeners() {
         bind.redirectButton.setOnClickListener{
-            startActivity(Intent(this, MainActivity::class.java))
+            startActivity(Intent(this, BottomnavbarActivity::class.java))
             finish()
         }
 
