@@ -8,6 +8,7 @@ class PengeluaranHarian(
 
     fun addParent (keuanganHarian: KeuanganHarian){
         this.uang=keuanganHarian.uang
+        this.jenis=keuanganHarian.jenis
         this.dotd=keuanganHarian.dotd
     }
 

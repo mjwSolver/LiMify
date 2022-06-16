@@ -101,7 +101,7 @@ class PemasukanActivity : AppCompatActivity() {
                 val adf = SimpleDateFormat("dd/M/yyyy")
                 val currentDat = adf.format(Date())
                 var tes: Keuangan = Keuangan(pengeluaran,catatan,tipe,text,currentDate,GlobalVar.uid)
-                var test: KeuanganHarian = KeuanganHarian(pengeluaran,currentDat)
+                var test: KeuanganHarian = KeuanganHarian(pengeluaran,text,currentDat)
                 var temp = PengeluaranHarian(tipe)
                 temp.addParent(test)
                 GlobalVar.listDataKeluarHarian.add(temp)

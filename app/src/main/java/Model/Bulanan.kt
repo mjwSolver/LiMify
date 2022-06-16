@@ -4,17 +4,23 @@ import android.os.Parcel
 import android.os.Parcelable
 
 data class Bulanan(
-    var uang:String?,
+    var kebutuhan:String?,
+    var keinginan:String?,
+    var investasi:String?,
     var dom:String?
-): Parcelable {
+) : Parcelable {
     constructor(parcel: Parcel) : this(
+        parcel.readString(),
+        parcel.readString(),
         parcel.readString(),
         parcel.readString()
     ) {
     }
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {
-        parcel.writeString(uang)
+        parcel.writeString(kebutuhan)
+        parcel.writeString(keinginan)
+        parcel.writeString(investasi)
         parcel.writeString(dom)
     }
 
@@ -31,4 +37,5 @@ data class Bulanan(
             return arrayOfNulls(size)
         }
     }
+
 }

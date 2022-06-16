@@ -5,9 +5,11 @@ import android.os.Parcelable
 
 open class KeuanganHarian (
     var uang:String?,
+    var jenis:String?,
     var dotd:String?
-): Parcelable {
-    constructor(parcel: Parcel?) : this(
+) : Parcelable {
+    constructor(parcel: Parcel) : this(
+        parcel.readString(),
         parcel.readString(),
         parcel.readString()
     ) {
@@ -15,6 +17,7 @@ open class KeuanganHarian (
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {
         parcel.writeString(uang)
+        parcel.writeString(jenis)
         parcel.writeString(dotd)
     }
 
@@ -31,4 +34,5 @@ open class KeuanganHarian (
             return arrayOfNulls(size)
         }
     }
+
 }
