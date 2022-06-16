@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FBC02D"
-    tools:context="com.example.limify01.Menu2Fragment">
+    android:background="@color/DarkBlue"
+    tools:context="com.example.limify.Menu2Fragment">
 
     <!-- TODO: Update blank fragment layout -->
 
@@ -14,7 +14,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
+        android:fontFamily="@font/lemonregular"
         android:text="Input Pengeluaran"
+        android:textColor="@color/JustYellow"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -24,9 +26,17 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/pengeluaranbox"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="384dp"
-        android:layout_height="74dp"
-        android:layout_marginTop="28dp"
+        android:layout_width="386dp"
+        android:layout_height="62dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:background="@color/KindaWhite"
+        android:backgroundTint="@color/KindaWhite"
+        app:boxCornerRadiusBottomEnd="15dp"
+        app:boxCornerRadiusBottomStart="15dp"
+        app:boxCornerRadiusTopEnd="15dp"
+        app:boxCornerRadiusTopStart="15dp"
         app:errorEnabled="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.448"
@@ -38,15 +48,26 @@
             android:layout_width="382dp"
             android:layout_height="57dp"
             android:layout_marginTop="28dp"
+            android:backgroundTint="@color/KindaWhite"
             android:hint="Pengeluaran" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/catatanuser"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_width="387dp"
+        android:layout_height="67dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:background="@color/KindaWhite"
+        app:boxCornerRadiusBottomEnd="15dp"
+        app:boxCornerRadiusBottomStart="15dp"
+        app:boxCornerRadiusTopEnd="15dp"
+        app:boxCornerRadiusTopStart="15dp"
+        app:boxStrokeColor="@color/LightBlue"
+        app:boxStrokeWidth="3dp"
+        app:boxStrokeWidthFocused="3dp"
         app:errorEnabled="true"
         app:layout_constraintEnd_toEndOf="@+id/pengeluaranbox"
         app:layout_constraintStart_toStartOf="@+id/pengeluaranbox"
@@ -55,6 +76,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
             android:hint="Catatan" />
 
         <Spinner
@@ -69,10 +91,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
+        android:backgroundTint="@color/LightBlue"
         android:text="Submit"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/catatanuser"/>
+        app:layout_constraintTop_toBottomOf="@+id/catatanuser" />
 
     <TextView
         android:id="@+id/textView5"
@@ -80,6 +103,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:text="Klik di sini untuk pemasukan"
+        android:textColor="@color/KindaWhite"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button" />

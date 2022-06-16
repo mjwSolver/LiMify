@@ -244,7 +244,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:backgroundTint="@color/KindaWhite"
-                    android:hint="Makan Pagi"
+                    android:hint="Needs = 50%"
                     android:inputType="number"
                     android:maxLength="3"
                     android:textColor="@color/DarkBlue"

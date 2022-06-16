@@ -34,6 +34,18 @@ class SettingsActivity : AppCompatActivity() {
             finish()
         }
 
+        bind.signOutButton.setOnClickListener{
+
+            val shareEditor: SharedPreferences.Editor = pref.edit()
+            shareEditor.remove("shared")
+            shareEditor.apply()
+
+            FirebaseAuth.getInstance().signOut()
+            startActivity(Intent(this, LoginPage::class.java))
+            finish()
+
+        }
+
 
         bind.deleteMyAccountButton.setOnClickListener{
 
