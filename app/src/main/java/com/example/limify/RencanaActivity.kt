@@ -16,7 +16,7 @@ import com.example.limify.databinding.ActivityRencanaBinding
 
 class RencanaActivity : AppCompatActivity() {
 
-    lateinit var shared: SharedPreferences
+//    lateinit var shared: SharedPreferences
     private lateinit var bind:ActivityRencanaBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,70 +28,79 @@ class RencanaActivity : AppCompatActivity() {
         var month = bind.defaultMonthlyCheckBoxan.isChecked
         var masuk = bind.masukPerBulanTextInputLayout.editText?.text.toString().trim()
         var luar = bind.pengeluaranSudahTextInputLayout.editText?.text.toString().trim()
-        var needs = bind.needTextInputLayout.editText?.text.toString().trim()
-        var wants = bind.wantsTextInputLayout.editText?.text.toString().trim()
-        var savings = bind.savingsTextInputLayout.editText?.text.toString().trim()
+//        var needs = bind.needTextInputLayout.editText?.text.toString().trim()
+//        var wants = bind.wantsTextInputLayout.editText?.text.toString().trim()
+//        var savings = bind.savingsTextInputLayout.editText?.text.toString().trim()
 
-        bind.saveButton.setOnClickListener{
+
+        bind.saveButton.setOnClickListener {
 
 //            replaced with individual whens.
-//            if(needs.isEmpty() || wants.isEmpty() || savings.isEmpty() || masuk.isEmpty() || luar.isEmpty()){
-//                TextUtils.isEmpty(
-//                    bind.needTextInputLayout.editText?.text.toString().trim { it <= ' ' }) .apply {
-//                    Toast.makeText(this@RencanaActivity, "Please enter amount for needs.", Toast.LENGTH_SHORT).show()
-//                }
-//                TextUtils.isEmpty(
-//                    bind.wantsTextInputLayout.editText?.text.toString().trim { it <= ' ' }) .apply {
-//                    Toast.makeText(this@RencanaActivity, "Please enter amount for wants.", Toast.LENGTH_SHORT).show()
-//                }
-//                TextUtils.isEmpty(
-//                    bind.savingsTextInputLayout.editText?.text.toString().trim { it <= ' ' }) .apply {
-//                    Toast.makeText(this@RencanaActivity, "Please enter amount of savings.", Toast.LENGTH_SHORT).show()
-//                }
-//                TextUtils.isEmpty(
-//                    bind.masukPerBulanTextInputLayout.editText?.text.toString().trim { it <= ' ' }) .apply {
-//                    Toast.makeText(this@RencanaActivity, "Harap mengisi pemasukan per bulannya", Toast.LENGTH_SHORT).show()
-//                }
-//                TextUtils.isEmpty(
-//                    bind.pengeluaranSudahTextInputLayout.editText?.text.toString().trim { it <= ' ' }) .apply {
-//                    Toast.makeText(this@RencanaActivity, "Harap mengisi pengeluaran selama bulan ini", Toast.LENGTH_SHORT).show()
-//                }
+//            if (needs.isEmpty()) {
+//                Toast.makeText(
+//                    this@RencanaActivity,
+//                    "Please enter amount for needs.",
+//                    Toast.LENGTH_SHORT
+//                ).show()
+////            fill1 = false
+//            } else if (wants.isEmpty()) {
+//                Toast.makeText(
+//                    this@RencanaActivity,
+//                    "Please enter amount for wants.",
+//                    Toast.LENGTH_SHORT
+//                ).show()
+////            fill2 = false
+//            } else if (savings.isEmpty()) {
+//                Toast.makeText(
+//                    this@RencanaActivity,
+//                    "Please enter amount of savings.",
+//                    Toast.LENGTH_SHORT
+//                ).show()
+////            fill3 = false
 //            } else
-                if(needs.toInt() + wants.toInt() + savings.toInt() != 100) {
-
-                    if ( needs.toInt() + wants.toInt() + savings.toInt() > 100) {
-                        Toast.makeText(this@RencanaActivity, "You've exceeded 100% limit, please reconfigure", Toast.LENGTH_LONG).show()
-                    } else if (needs.toInt() + wants.toInt() + savings.toInt() < 100) {
-                        Toast.makeText(this@RencanaActivity, "Your final percentage isn't 100%", Toast.LENGTH_LONG).show()
-                    }
-
+                if (bind.masukPerBulanTextInputLayout.editText?.text.toString().isEmpty()) {
+                Toast.makeText(
+                    this@RencanaActivity,
+                    "Harap mengisi pemasukan per bulannya",
+                    Toast.LENGTH_SHORT
+                ).show()
+//            fill4 = false
+            } else
+                if (bind.pengeluaranSudahTextInputLayout.editText?.text.toString().isEmpty()) {
+                Toast.makeText(
+                    this@RencanaActivity,
+                    "Harap mengisi pengeluaran selama bulan ini",
+                    Toast.LENGTH_SHORT
+                ).show()
+//            fill5 = false
             } else {
 
-                val sharedEditor: SharedPreferences.Editor = shared.edit()
-                sharedEditor.putString("masuk", masuk)
-                    .putString("luar", luar)
-                    .putString("needs", needs)
-                    .putString("wants", wants)
-                    .putString("savings", savings)
-                    .putBoolean("monthly", month)
-                    .apply()
+//                val sharedEditor: SharedPreferences.Editor = shared.edit()
+//                sharedEditor.putString("masuk", masuk)
+//                    .putString("luar", luar)
+//                    .putString("needs", needs)
+//                    .putString("wants", wants)
+//                    .putString("savings", savings)
+//                    .putBoolean("monthly", month)
+//                    .apply()
 
                 masukan = masuk
                 luaran = luar
 
-                needing = needs
-                wanting = wants
-                saving = savings
+//                needing = needs
+//                wanting = wants
+//                saving = savings
 
                 monthing = month
 
-                val intenting = Intent(this, MainActivity::class.java)
+                val intenting = Intent(this, BottomnavbarActivity::class.java)
                 startActivity(intenting)
                 finish()
+
             }
-
-
         }
+
+
 
 
     }

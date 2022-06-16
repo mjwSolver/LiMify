@@ -7,11 +7,18 @@ open class KeuanganHarian (
     var uang:String?,
     var jenis:String?,
     var dotd:String?
+<<<<<<< Updated upstream
 ) : Parcelable {
     constructor(parcel: Parcel) : this(
         parcel.readString(),
         parcel.readString(),
         parcel.readString()
+=======
+): Parcelable {
+    constructor(parcel: Parcel?) : this(
+        parcel?.readString(),
+        parcel?.readString()
+>>>>>>> Stashed changes
     ) {
     }
 

@@ -5,7 +5,6 @@ import android.os.Bundle
 import androidx.fragment.app.Fragment
 import com.example.limify.databinding.ActivityBottomnavbarBinding
 import com.example.limify01.Menu1Fragment
-import com.example.limify01.Menu2Fragment
 import com.example.limify01.Menu3Fragment
 import com.example.limify01.Menu4Fragment
 

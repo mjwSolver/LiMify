@@ -10,10 +10,15 @@ data class Bulanan(
     var dom:String?
 ) : Parcelable {
     constructor(parcel: Parcel) : this(
+<<<<<<< Updated upstream
         parcel.readString(),
         parcel.readString(),
         parcel.readString(),
         parcel.readString()
+=======
+        parcel?.readString(),
+        parcel?.readString()
+>>>>>>> Stashed changes
     ) {
     }
 
